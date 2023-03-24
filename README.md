@@ -1,6 +1,9 @@
 # sxPyShell
 
-A Simple "shell" for Linux written in Python that supports custom commands
+A Simple lightweight and open source "shell" for Linux written in Python that supports custom commands
+
+# NOTE
+sxPyShell is a VERY BASIC shell and i don`t think that you can set it as your default shell. Maybe in future it is gona be more like shell thing.
 
 # Requriments
 
@@ -64,5 +67,5 @@ $ chmod +x sxPyShell.py # with this command you can use ./SxPyShell command to s
 - (OPTIONAL) if you want to you can move script to the bin folder to run it from your terminal
 
 # Contribution
-TODO
+If you want to contribute to the project just create a pull request! then i will check it and if its good approve it!
 
