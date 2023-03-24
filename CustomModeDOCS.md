@@ -1,2 +1,0 @@
-# sxPyShell | Custom Mode Documentation
-
