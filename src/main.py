@@ -2,10 +2,11 @@ import os
 from colorama import Fore
 import configparser
 import time
+import sys
 
 from custommode import custommode
 
-ver = "Alpha"
+ver = "v1.0A"
 
 config = configparser.ConfigParser()
 config.read('sxPyShellConfig.ini')
@@ -77,7 +78,12 @@ while True:
         info()
 
     if command == "sxPyShell.reload":
-        os.system("python main.py")
+        print("reloading sxPyShell")
+        time.sleep(0.5)
+        os.system("clear")
+        python = sys.executable
+        os.execl(python, python, *sys.argv)
+
 
     if command.startswith("cd "):
         path = command.split(" ")[1]
