@@ -10,7 +10,25 @@ A Simple "shell" for Linux written in Python that supports custom commands
 # Installation
 
 ## Using installation script
-TODO
+
+- Clone github repo and cd into it
+
+```shell
+$ git clone https://github.com/sxnvte/sxPyShell 
+$ cd sxPyShell
+```
+
+- Add permissions to the installation script
+
+```shell
+$ chmod +x sxPyShell-Installator.sh
+```
+
+- Run script and done!
+
+```shell
+$ ./sxPyShell-Installator.sh
+```
 
 ## Manual way
 
@@ -21,9 +39,11 @@ TODO
 $ sudo pacman -S python python-pip
 ```
 
-- Clone github repo
+- Clone github repo and cd into it
+
 ```shell
-$ git clone
+$ git clone https://github.com/sxnvte/sxPyShell 
+$ cd sxPyShell
 ```
 
 
@@ -38,7 +58,7 @@ $ pip install -r requriments.txt
 - (OPTIONAL) use this command to start sxPyShell like script
 
 ```shell
-$ chmod +x sxPyShell.py # with this command you can use ./SxPyShell command to start it like script or smth
+$ chmod +x sxPyShell.py # with this command you can use ./SxPyShell command to start it like script or something
 ```
 
 - (OPTIONAL) if you want to you can move script to the bin folder to run it from your terminal
