@@ -47,7 +47,21 @@ print(Fore.MAGENTA + """           _____        _____ _          _ _
 print("")
 print(f"sxPyShell {ver} by sxnvte")
 print(Fore.WHITE + "")
-print(checkCM)
+
+def info():
+    print(Fore.MAGENTA + """           _____        _____ _          _ _ 
+          |  __ \      / ____| |        | | |
+  _____  _| |__) |   _| (___ | |__   ___| | |
+ / __\ \/ /  ___/ | | |\___ \| '_ \ / _ \ | |
+ \__ \>  <| |   | |_| |____) | | | |  __/ | |
+ |___/_/\_\_|    \__, |_____/|_| |_|\___|_|_|
+                  __/ |                      
+                 |___/                       """)
+    print("")
+    print(Fore.WHITE + "")
+    print(f"Version: {ver}")
+    print("Author: sxnvte")
+    print("Github repository: https://github.com/sxnvte/sxPyShell")
 
 while True:
     current_directory = os.getcwd()
@@ -58,6 +72,12 @@ while True:
 
     if command == "custommode":
         custommode()
+
+    if command == "sxPyShell.info":
+        info()
+
+    if command == "sxPyShell.reload":
+        os.system("python main.py")
 
     if command.startswith("cd "):
         path = command.split(" ")[1]
