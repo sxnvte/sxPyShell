@@ -69,6 +69,9 @@ $ chmod +x sxPyShell.py # with this command you can use ./SxPyShell command to s
 
 - (OPTIONAL) if you want to you can move script to the bin folder to run it from your terminal
 
+# If you have config error:
+- copy sxPyShellConfig.ini file to /home/username/.config/sxPyShell folder and it should fix it
+
 # Contribution
 If you want to contribute to the project just create a pull request! then i will check it and if its good approve it!
 

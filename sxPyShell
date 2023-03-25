@@ -1,5 +1,0 @@
-#!/bin/sh
-
-# this is a script for starting faster sxPyShell
-
-python src/main.py
