@@ -3,7 +3,8 @@
 A Simple lightweight and open source "shell" for Linux written in Python that supports custom commands
 
 [sxPyShell Docs](https://sxnvte.gitbook.io/sxpyshell/)
-
+ 
+[Todo list](https://github.com/users/sxnvte/projects/3)
 # NOTE
 sxPyShell is a VERY BASIC shell and i don`t think that you can set it as your default shell. Maybe in future it is gona be more like shell thing.
 
