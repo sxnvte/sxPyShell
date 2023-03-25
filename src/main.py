@@ -3,10 +3,13 @@ from colorama import Fore
 import configparser
 import time
 import sys
+import socket
 
 from custommode import custommode
 
 ver = "v1.0A"
+username = os.getlogin()
+hostname = socket.gethostname()
 
 config = configparser.ConfigParser()
 config.read('sxPyShellConfig.ini')
@@ -19,20 +22,6 @@ time.sleep(1.5)
 # check if custom mode is enabled in config
 checkCM = config.getboolean('main', 'customMode')
 
-def custommode():
-    print(Fore.MAGENTA + """           _____        _____ _          _ _ 
-          |  __ \      / ____| |        | | |
-  _____  _| |__) |   _| (___ | |__   ___| | |
- / __\ \/ /  ___/ | | |\___ \| '_ \ / _ \ | |
- \__ \>  <| |   | |_| |____) | | | |  __/ | |
- |___/_/\_\_|    \__, |_____/|_| |_|\___|_|_|
-                  __/ |                      
-                 |___/                       """)
-    print(Fore.WHITE + "")
-    print(f"sxPyShell {ver} CUSTOM MODE by sxnvte")
-    print("in custom mode you can make own 'shell'. custom commands etc.")
-    while True:
-        command = input("sxPyShell | Custom mode > ")
 
 if checkCM == True:
     custommode()
@@ -66,7 +55,7 @@ def info():
 
 while True:
     current_directory = os.getcwd()
-    command = input(f"{current_directory} $ ")
+    command = input(f"{username}@{hostname}:{current_directory} $ ")
 
     if command == "exit":
         break
