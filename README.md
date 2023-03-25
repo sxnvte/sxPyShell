@@ -20,19 +20,19 @@ sxPyShell is a VERY BASIC shell and i don`t think that you can set it as your de
 
 ```shell
 $ git clone https://github.com/sxnvte/sxPyShell 
-$ cd sxPyShell
+$ cd sxPyShell/installator
 ```
 
 - Add permissions to the installation script
 
 ```shell
-$ chmod +x sxPyShell-Installator.sh
+$ chmod +x sxpyshell-install.sh
 ```
 
 - Run script and done!
 
 ```shell
-$ ./sxPyShell-Installator.sh
+$ ./sxpyshell-install.sh
 ```
 
 ## Manual way
