@@ -11,13 +11,20 @@ ver = "v1.0A"
 username = os.getlogin()
 hostname = socket.gethostname()
 
+configpath = "/home/" + os.getlogin() + "/.config/sxPyShell"
+if not os.path.exists(configpath):
+    os.makedirs(configpath)
+
+file_path = os.path.join(configpath, "sxPyShellConfig.ini")
+if not os.path.isfile(file_path):
+    print("it seems that you don`t have a config file for sxPyShell! please copy the example config from Github to the /home/username/.config/sxPyShell to continue")
+    sys.exit()
 config = configparser.ConfigParser()
-config.read('sxPyShellConfig.ini')
+config.read(file_path)
 
-if os.name == 'nt':
-    print("sxPyShell detected that you are on Windows! sxPyShell was made for Linux and on Windows it may don`t work like it supposed to be")
-
-time.sleep(1.5)
+# if os.name == 'nt':
+#     print("sxPyShell detected that you are on Windows! sxPyShell was made for Linux and on Windows it may don`t work like it supposed to be")
+#     time.sleep(1.5)
 
 # check if custom mode is enabled in config
 checkCM = config.getboolean('main', 'customMode')
@@ -50,7 +57,7 @@ def info():
     print("")
     print(Fore.WHITE + "")
     print(f"Version: {ver}")
-    print("Author: sxnvte")
+    print("Creator: sxnvte")
     print("Github repository: https://github.com/sxnvte/sxPyShell")
 
 while True:

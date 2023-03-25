@@ -12,6 +12,7 @@
 
 import os
 from colorama import Fore
+import sys
 
 def custommode():
     print(Fore.MAGENTA + """           _____        _____ _          _ _ 
@@ -28,4 +29,4 @@ def custommode():
     while True:
         command = input("sxPyShell | Custom mode > ")
         if command == "exit":
-            break
+            sys.exit()
