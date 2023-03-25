@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import os
-from colorama import Fore
+from colorama import Fore, Style
 import configparser
 import time
 import sys
@@ -9,7 +9,7 @@ import socket
 
 from custommode import custommode
 
-ver = "v1.0A"
+ver = "v1.0B"
 username = os.getlogin()
 hostname = socket.gethostname()
 
@@ -30,6 +30,7 @@ config.read(file_path)
 
 # check if custom mode is enabled in config
 checkCM = config.getboolean('main', 'customMode')
+#prompt = config.get('main', 'prompt') disabled for now
 
 
 if checkCM == True:
@@ -45,7 +46,13 @@ print(Fore.MAGENTA + """           _____        _____ _          _ _
                  |___/                       """)
 print("")
 print(f"sxPyShell {ver} by sxnvte")
-print(Fore.WHITE + "")
+print(Fore.WHITE + "" + Style.RESET_ALL)
+print("type: 'sxPyShell.help to see sxPyShell commands'")
+
+def helpcmd():
+    print("Commands:")
+    print("sxPyShell.info > this command will show you a information about sxPyShell")
+    print("sxPyShell.reload > this command will relaod the sxPyShell")
 
 def info():
     print(Fore.MAGENTA + """           _____        _____ _          _ _ 
@@ -81,6 +88,10 @@ while True:
         os.system("clear")
         python = sys.executable
         os.execl(python, python, *sys.argv)
+    
+    if command == "sxPyShell.help":
+        print("Help for sxPyShell:")
+        helpcmd()
 
 
     if command.startswith("cd "):
